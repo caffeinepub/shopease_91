@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Bricolage+Grotesque:wght@400;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    /* Background: white */
+    --background: 1 0 0;
+    --foreground: 0.2 0.04 250;
+    --card: 1 0 0;
+    --card-foreground: 0.2 0.04 250;
+    --popover: 1 0 0;
+    --popover-foreground: 0.2 0.04 250;
+    /* Primary: deep navy */
+    --primary: 0.28 0.08 240;
+    --primary-foreground: 1 0 0;
+    /* Secondary: light gray-blue */
+    --secondary: 0.96 0.01 240;
+    --secondary-foreground: 0.28 0.08 240;
+    --muted: 0.96 0.01 240;
+    --muted-foreground: 0.55 0.03 240;
+    /* Accent: orange */
+    --accent: 0.65 0.2 40;
+    --accent-foreground: 1 0 0;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.9 0.02 240;
+    --input: 0.9 0.02 240;
+    --ring: 0.65 0.2 40;
+    --chart-1: 0.646 0.222 41.116;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+    --sidebar: 0.985 0 0;
+    --sidebar-foreground: 0.2 0.04 250;
+    --sidebar-primary: 0.28 0.08 240;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.96 0.01 240;
+    --sidebar-accent-foreground: 0.28 0.08 240;
+    --sidebar-border: 0.9 0.02 240;
+    --sidebar-ring: 0.65 0.2 40;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
