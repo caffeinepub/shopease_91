@@ -10,7 +10,7 @@ const promos = [
   {
     icon: Truck,
     title: "Free Shipping",
-    subtitle: "On orders over $50",
+    subtitle: "On orders over ₹500",
     bg: "bg-navy",
     text: "text-white",
   },
@@ -63,7 +63,7 @@ export default function HomePage() {
             </h1>
             <p className="text-white/80 text-lg md:text-xl mb-8 max-w-xl mx-auto">
               Discover thousands of products at unbeatable prices. Free shipping
-              on orders over $50.
+              on orders over ₹500.
             </p>
             <div className="flex gap-4 justify-center flex-wrap">
               <Link to="/catalog">

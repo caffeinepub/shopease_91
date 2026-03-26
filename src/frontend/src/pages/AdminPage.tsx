@@ -77,6 +77,10 @@ type ProductFormState = {
 
 const TABLE_SKELETON_KEYS = ["ts1", "ts2", "ts3", "ts4", "ts5"];
 
+function formatINR(amount: number): string {
+  return `₹${amount.toLocaleString("en-IN", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+}
+
 const toFormState = (p: Omit<Product, "id">): ProductFormState => ({
   name: p.name,
   description: p.description,
@@ -398,7 +402,7 @@ export default function AdminPage() {
                           <Badge variant="secondary">{product.category}</Badge>
                         </TableCell>
                         <TableCell className="font-medium">
-                          ${Number(product.price).toFixed(2)}
+                          {formatINR(Number(product.price))}
                         </TableCell>
                         <TableCell>
                           <Badge
@@ -502,7 +506,7 @@ export default function AdminPage() {
                         </TableCell>
                         <TableCell>{order.items.length} item(s)</TableCell>
                         <TableCell className="font-medium">
-                          ${Number(order.total).toFixed(2)}
+                          {formatINR(Number(order.total))}
                         </TableCell>
                         <TableCell>
                           <div>
@@ -615,14 +619,14 @@ export default function AdminPage() {
                 />
               </div>
               <div className="space-y-1.5">
-                <Label>Price ($)</Label>
+                <Label>Price (₹)</Label>
                 <Input
                   type="number"
                   min="0"
                   step="0.01"
                   value={productForm.price}
                   onChange={(e) => handleFormChange("price", e.target.value)}
-                  placeholder="29.99"
+                  placeholder="499"
                   data-ocid="admin.input"
                 />
               </div>
